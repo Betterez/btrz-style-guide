@@ -13,89 +13,101 @@ module.exports = {
     "mocha": true,
   },
   "rules": {
-    // Mocha
-    "mocha/handle-done-callback": 2,
-    "mocha/no-global-tests": 2,
+    // ---- eslint-plugin-mocha overrides ----
+    "mocha/handle-done-callback": "error",
+    "mocha/no-global-tests": "error",
 
-    // BEST PRACTICES
-    "no-implicit-coercion": 2,
-    "no-implicit-globals": 2,
-    "no-native-reassign": 2,
-    "no-warning-comments": 2,
+    // ---- best-practices.js overrides ----
+    "no-implicit-coercion": "error",
+    "no-implicit-globals": "error",
+    "no-warning-comments": "error",
+    "no-param-reassign": ["error", {
+      props: true,
+      ignorePropertyModificationsFor: [
+        "acc", // for reduce accumulators
+        "accumulator", // for reduce accumulators
+        "e", // for e.returnvalue
+        "ctx", // for Koa routing
+        "req", // for Express requests
+        "request", // for Express requests
+        "res", // for Express responses
+        "response", // for Express responses
+        "state", // for Vuex mutations
+      ]
+    }],
 
-    // VARIABLES
+    // ---- variables.js overrides ----
     //  require or disallow initialization in var declarations
-    "init-declarations": 2,
-    //  disallow catch clause parameters from shadowing variables in the outer scope
-    "no-catch-shadow": 2,
+    "init-declarations": "error",
     //  disallow initializing variables to undefined
-    "no-undef-init": 0,
+    "no-undef-init": "off",
 
-    // NODE
+    // ---- node.js overrides ----
     // require return statements after callbacks
-    "callback-return": 2,
+    "callback-return": "error",
     // require require() calls to be placed at top-level module scope
-    "global-require": 0,
+    "global-require": "off",  //TODO: Why is this off? Talk to Hernan.
     // require error handling in callbacks
-    "handle-callback-err": [2, "^(err|error)$"],
-    // disallow require calls to be mixed with regular var declarations
-    "no-mixed-requires": 0,
-    // disallow new operators with calls to require
-    "no-new-require": 2,
+    "handle-callback-err": ["error", "^(err|error)$"],
     // disallow string concatenation with __dirname and __filename
-    "no-path-concat": 0,
+    "no-path-concat": "off",  //TODO: Why is this off? Talk to Hernan.
 
-    // STYLES
+    // ---- style.js overrides ----
+    // require trailing commas in multiline object literals
+    'comma-dangle': ["error", "never"],
     // enforce consistent naming when capturing the current execution context
-    "consistent-this": [2, "self"],
+    "consistent-this": ["error", "self"],
     // enforce named function expressions
-    "func-names": 2,
+    "func-names": "error",
     // enforce the consistent use of either function declarations or expressions
-    "func-style": [2, "declaration"],
-    // disallow specified identifiers
-    "id-blacklist": 2,
-    // enforce consistent indentation CHECK OPTIONS
-    "indent": ["error", 2],
+    "func-style": ["error", "declaration"],
     // enforce the consistent use of either double or single quotes in JSX attributes
-    "jsx-quotes": 2,
-    // enforce consistent spacing between keys and values in object literal properties CHECK OPTIONS
-    "key-spacing": 2,
-    // enforce consistent spacing before and after keywords CHECK OPTIONS
-    "keyword-spacing": 2,
+    "jsx-quotes": "error",
     // enforce a maximum depth that blocks can be nested
-    "max-depth": 2,
+    "max-depth": "error",
     // enforce a maximum line length CHECK OPTIONS
-    "max-len": [2, {"code": 140, "tabWidth": 2, "ignoreUrls": true}],
+    "max-len": ["error", {"code": 140, "tabWidth": 2, "ignoreUrls": true}],
     // enforce a maximum depth that callbacks can be nested
-    "max-nested-callbacks": 2,
+    "max-nested-callbacks": "error",
     // enforce a maximum number of parameters in function definitions
-    "max-params": [2, 5],
+    "max-params": ["error", 5],
     // enforce a maximum number of statements allowed in function blocks
-    "max-statements": [2, 30],
+    "max-statements": ["error", 30], //TODO. Seems too much. Talk with Hernan.
     // enforce a maximum number of statements allowed per line
-    "max-statements-per-line": 2,
+    "max-statements-per-line": "error",
     // disallow inline comments after code
-    "no-inline-comments": 2,
+    "no-inline-comments": "error",  //TODO. I like inline comments :( Talk with Hernan.
     // disallow the unary operators ++ and --
-    "no-plusplus": 0,
+    "no-plusplus": "off",
     // disallow trailing whitespace at the end of lines
-    "no-trailing-spaces": 0,
+    "no-trailing-spaces": "off",  //TODO. Why is this off? Talk with Hernan.
     // disallow dangling underscores in identifiers
-    "no-underscore-dangle": 0,
+    "no-underscore-dangle": "off",  //TODO. Why is this off? Talk with Hernan.
+    // require padding inside curly braces
+    'object-curly-spacing': ["error", "never"],
+    // enforce line breaks between braces
+    'object-curly-newline': ['error', {
+      ObjectExpression: {multiline: true, consistent: true},
+      ObjectPattern: {multiline: true, consistent: true},
+      ImportDeclaration: {multiline: true, consistent: true},
+      ExportDeclaration: {multiline: true, consistent: true},
+    }],
     // require quotes around object literal property names
-    "quote-props": 0,
+    "quote-props": "off",  //TODO. Airbnb "as needed" seems better I think. Talk with Hernan.
     // enforce the consistent use of either backticks, double, or single quotes CHECK OPTIONS
-    "quotes": [2, "double"],
-
+    "quotes": ["error", "double"],
     // enforce sorted import declarations within module
-    "sort-imports": 0,
+    "sort-imports": "off",
 
-    // ES6
-    // disallow specified modules when loaded by import
-    "no-restricted-imports": 2,
+    // ---- es6.js overrides ----
     // require Reflect methods where applicable
-    "prefer-reflect": 2,
+    "prefer-reflect": "error", //TODO: Deprecated. Talk to Hernan.
 
-    "no-console": 0,
+    // ---- errors.js overrides ----
+    "no-console": "off",
+
+    // ---- imports.js overrides ----
+    // Ensure consistent use of file extension within the import path
+    'import/extensions': ['error', 'ignorePackages'],
   }
 };
