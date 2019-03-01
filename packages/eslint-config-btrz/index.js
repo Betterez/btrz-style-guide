@@ -46,11 +46,11 @@ module.exports = {
     // require return statements after callbacks
     "callback-return": "error",
     // require require() calls to be placed at top-level module scope
-    "global-require": "off",  //TODO: Why is this off? Talk to Hernan.
+    "global-require": "off",
     // require error handling in callbacks
     "handle-callback-err": ["error", "^(err|error)$"],
     // disallow string concatenation with __dirname and __filename
-    "no-path-concat": "off",  //TODO: Why is this off? Talk to Hernan.
+    "no-path-concat": "off",  //TODO: Talk to the team
 
     // ---- style.js overrides ----
     // require trailing commas in multiline object literals
@@ -72,17 +72,15 @@ module.exports = {
     // enforce a maximum number of parameters in function definitions
     "max-params": ["error", 5],
     // enforce a maximum number of statements allowed in function blocks
-    "max-statements": ["error", 30], //TODO. Seems too much. Talk with Hernan.
+    "max-statements": ["error", 30], //TODO: Talk to the team
     // enforce a maximum number of statements allowed per line
     "max-statements-per-line": "error",
     // disallow inline comments after code
-    "no-inline-comments": "error",  //TODO. I like inline comments :( Talk with Hernan.
+    "no-inline-comments": "error",
     // disallow the unary operators ++ and --
     "no-plusplus": "off",
-    // disallow trailing whitespace at the end of lines
-    "no-trailing-spaces": "off",  //TODO. Why is this off? Talk with Hernan.
     // disallow dangling underscores in identifiers
-    "no-underscore-dangle": "off",  //TODO. Why is this off? Talk with Hernan.
+    "no-underscore-dangle": "off",
     // require padding inside curly braces
     'object-curly-spacing': ["error", "never"],
     // enforce line breaks between braces
@@ -92,16 +90,10 @@ module.exports = {
       ImportDeclaration: {multiline: true, consistent: true},
       ExportDeclaration: {multiline: true, consistent: true},
     }],
-    // require quotes around object literal property names
-    "quote-props": "off",  //TODO. Airbnb "as needed" seems better I think. Talk with Hernan.
-    // enforce the consistent use of either backticks, double, or single quotes CHECK OPTIONS
+    // enforce the consistent use of either backticks, double, or single quotes
     "quotes": ["error", "double"],
     // enforce sorted import declarations within module
     "sort-imports": "off",
-
-    // ---- es6.js overrides ----
-    // require Reflect methods where applicable
-    "prefer-reflect": "error", //TODO: Deprecated. Talk to Hernan.
 
     // ---- errors.js overrides ----
     "no-console": "off",
