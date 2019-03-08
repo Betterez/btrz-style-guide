@@ -105,6 +105,8 @@ module.exports = {
       ImportDeclaration: {multiline: true, consistent: true},
       ExportDeclaration: {multiline: true, consistent: true},
     }],
+    // require quotes around object literal property names
+    'quote-props': ["error", "consistent"],
     // enforce the consistent use of either backticks, double, or single quotes
     "quotes": ["error", "double"],
     // enforce sorted import declarations within module
