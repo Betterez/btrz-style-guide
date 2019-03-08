@@ -6,6 +6,8 @@ Based on Airbnb style guide (base) eslint package.
 
 Guide: https://github.com/airbnb/javascript
 
+The rules were copied from version `13.0.1` of `eslint-config-airbnb-base`.
+
 ### Usage
 
 Install `eslint-config-btrz` using npm as a dev dependency.

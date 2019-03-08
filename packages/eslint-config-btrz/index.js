@@ -1,6 +1,17 @@
 module.exports = {
-  extends: ["airbnb-base", "plugin:vue/essential"],
-  // required to lint *.vue files
+  extends: [
+    "./eslint-config-airbnb-base/rules/best-practices",
+    "./eslint-config-airbnb-base/rules/errors",
+    "./eslint-config-airbnb-base/rules/node",
+    "./eslint-config-airbnb-base/rules/style",
+    "./eslint-config-airbnb-base/rules/variables",
+    "./eslint-config-airbnb-base/rules/es6",
+    "./eslint-config-airbnb-base/rules/imports",
+    "plugin:vue/essential"],
+  parserOptions: {  // copied from airbnb-config-airbnb-base (see README)
+    ecmaVersion: 2018,
+    sourceType: 'module',
+  },
   plugins: [
     "html",
     "mocha"
@@ -13,6 +24,10 @@ module.exports = {
     "mocha": true,
   },
   "rules": {
+    strict: 'error', // copied from airbnb-config-airbnb-base (see README)
+
+    // OVERRIDES of airbnb-config-airbnb-base BELOW
+
     // ---- eslint-plugin-mocha overrides ----
     "mocha/handle-done-callback": "error",
     "mocha/no-global-tests": "error",
