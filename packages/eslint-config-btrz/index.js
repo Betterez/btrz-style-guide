@@ -1,12 +1,12 @@
 module.exports = {
   extends: [
-    "./eslint-config-airbnb-base/rules/best-practices",
-    "./eslint-config-airbnb-base/rules/errors",
-    "./eslint-config-airbnb-base/rules/node",
-    "./eslint-config-airbnb-base/rules/style",
-    "./eslint-config-airbnb-base/rules/variables",
-    "./eslint-config-airbnb-base/rules/es6",
-    "./eslint-config-airbnb-base/rules/imports",
+    "./eslint-config-airbnb-base/rules/best-practices.js",
+    "./eslint-config-airbnb-base/rules/errors.js",
+    "./eslint-config-airbnb-base/rules/node.js",
+    "./eslint-config-airbnb-base/rules/style.js",
+    "./eslint-config-airbnb-base/rules/variables.js",
+    "./eslint-config-airbnb-base/rules/es6.js",
+    "./eslint-config-airbnb-base/rules/imports.js",
     "plugin:vue/essential"],
   parserOptions: {  // copied from airbnb-config-airbnb-base (see README)
     ecmaVersion: 2018,
