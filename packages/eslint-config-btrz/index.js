@@ -65,9 +65,11 @@ module.exports = {
     // require error handling in callbacks
     "handle-callback-err": ["error", "^(err|error)$"],
     // disallow string concatenation with __dirname and __filename
-    "no-path-concat": "off",  //TODO: Talk to the team
-
+    "no-path-concat": "off", 
+    "no-restricted-syntax": "off",
+   
     // ---- style.js overrides ----
+     "arrow-body-style": [2, "always"],
     // require trailing commas in multiline object literals
     'comma-dangle': ["error", "never"],
     // enforce consistent naming when capturing the current execution context
@@ -105,6 +107,7 @@ module.exports = {
       ImportDeclaration: {multiline: true, consistent: true},
       ExportDeclaration: {multiline: true, consistent: true},
     }],
+    "prefer-destructuring": "off",
     // require quotes around object literal property names
     'quote-props': ["error", "consistent"],
     // enforce the consistent use of either backticks, double, or single quotes
@@ -118,5 +121,7 @@ module.exports = {
     // ---- imports.js overrides ----
     // Ensure consistent use of file extension within the import path
     'import/extensions': ['error', 'ignorePackages'],
+    "import/order": "off",
+    "import/newline-after-import": "off"
   }
 };
