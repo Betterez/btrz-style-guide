@@ -12,6 +12,13 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
+  settings: {
+    'import/resolver': {
+      nuxt: {
+        extensions: ['.vue']
+      }
+    },
+  },
   plugins: [
     "html",
     "mocha"
@@ -65,9 +72,9 @@ module.exports = {
     // require error handling in callbacks
     "handle-callback-err": ["error", "^(err|error)$"],
     // disallow string concatenation with __dirname and __filename
-    "no-path-concat": "off", 
+    "no-path-concat": "off",
     "no-restricted-syntax": "off",
-   
+
     // ---- style.js overrides ----
      "arrow-body-style": [2, "always"],
     // require trailing commas in multiline object literals
