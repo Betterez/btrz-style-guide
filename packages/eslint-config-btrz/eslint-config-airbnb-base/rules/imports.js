@@ -14,9 +14,6 @@ module.exports = {
     'import/resolver': {
       node: {
         extensions: ['.mjs', '.js', '.json']
-      },
-      nuxt: {
-        extensions: ['.vue']
       }
     },
     'import/extensions': [
