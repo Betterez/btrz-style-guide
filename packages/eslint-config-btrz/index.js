@@ -114,6 +114,7 @@ module.exports = {
       ImportDeclaration: {multiline: true, consistent: true},
       ExportDeclaration: {multiline: true, consistent: true},
     }],
+    "operator-linebreak": ["error", "after"],
     "prefer-destructuring": "off",
     // require quotes around object literal property names
     'quote-props': ["error", "consistent"],
