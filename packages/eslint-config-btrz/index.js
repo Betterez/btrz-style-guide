@@ -131,5 +131,11 @@ module.exports = {
     'import/extensions': ['error', 'ignorePackages'],
     "import/order": "off",
     "import/newline-after-import": "off"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["resources/**/tests/**/*.js"],
+      "rules": {"import/no-extraneous-dependencies": "off"}
+    }
+  ]
 };
