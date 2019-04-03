@@ -21,7 +21,8 @@ module.exports = {
   },
   plugins: [
     "html",
-    "mocha"
+    "mocha",
+    "chai-friendly"
   ],
   "env": {
     "browser": true,
@@ -57,12 +58,16 @@ module.exports = {
         "state", // for Vuex mutations
       ]
     }],
+    "no-unused-expressions": "off",
+    "chai-friendly/no-unused-expressions": "error",
 
     // ---- variables.js overrides ----
     //  require or disallow initialization in var declarations
     "init-declarations": "error",
     //  disallow initializing variables to undefined
     "no-undef-init": "off",
+    // disallow declaration of variables that are not used in the code
+    'no-unused-vars': ['error', { vars: 'all', args: 'after-used', ignoreRestSiblings: true, "argsIgnorePattern": "^_" }],
 
     // ---- node.js overrides ----
     // require return statements after callbacks
@@ -76,7 +81,7 @@ module.exports = {
     "no-restricted-syntax": "off",
 
     // ---- style.js overrides ----
-     "arrow-body-style": [2, "always"],
+     "arrow-body-style": ["error", "always"],
     // require trailing commas in multiline object literals
     'comma-dangle': ["error", "never"],
     // enforce consistent naming when capturing the current execution context
