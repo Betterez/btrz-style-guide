@@ -2,7 +2,7 @@ defmodule BtrzCredoStyle.MixProject do
   use Mix.Project
 
   @github_url "https://github.com/Betterez/btrz-style-guide"
-  @version "0.1.0"
+  @version "0.1.1"
 
   def project do
     [
@@ -38,7 +38,7 @@ defmodule BtrzCredoStyle.MixProject do
   defp deps do
     [
       {:ex_doc, ">= 0.0.0", only: :dev},
-      {:credo, "~> 1.0.0", only: [:dev, :test], runtime: false}
+      {:credo, "~> 1.0.0", only: [:dev, :test]}
     ]
   end
 end
