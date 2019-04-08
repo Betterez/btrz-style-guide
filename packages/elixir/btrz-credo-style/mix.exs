@@ -2,7 +2,7 @@ defmodule BtrzCredoStyle.MixProject do
   use Mix.Project
 
   @github_url "https://github.com/Betterez/btrz-style-guide"
-  @version "0.1.2"
+  @version "0.1.3"
 
   def project do
     [
@@ -21,7 +21,10 @@ defmodule BtrzCredoStyle.MixProject do
   def package do
     [
       name: "btrz_credo_style",
-      files: [".credo.exs"],
+      files: [
+        ".credo.exs",
+        "mix.exs"
+      ],
       maintainers: ["Betterez"],
       licenses: ["MIT"],
       links: %{"GitHub" => @github_url}
