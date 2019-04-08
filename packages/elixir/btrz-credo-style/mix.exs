@@ -37,6 +37,7 @@ defmodule BtrzCredoStyle.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:ex_doc, ">= 0.0.0", only: :dev},
       {:credo, "~> 1.0.0", only: [:dev, :test], runtime: false}
     ]
   end
