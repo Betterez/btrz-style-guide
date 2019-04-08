@@ -24,6 +24,31 @@ module.exports = {
 Please do not add custom rules to your project.
 Just contribute with a change, prior discussing any issues you find :)
 
+## Elixir (credo)
+The elixir projects in Betterez use the [credo](https://github.com/rrrene/credo/) tool for code analysis.
+
+### Add it to your project
+
+Add `:btrz_credo_style` as a dependency to your project's `mix.exs`.
+
+```elixir
+defp deps do
+  [{:btrz_credo_style, "~> 0.1", only: [:dev, :test]}]
+end
+```
+
+Run `mix credo` once installed.
+
+### Edit rules
+
+1. To edit the credo rules edit `packages/elixir/btrz-credo-style/.credo.exs`.
+2. Update the `mix.exs` version
+3. add/commit/push!
+
+### vscode
+
+You can install `ElixirLinter` and will automatically check your code.
+
 ## IDEs
 
 ### IntelliJ Webstorm config
