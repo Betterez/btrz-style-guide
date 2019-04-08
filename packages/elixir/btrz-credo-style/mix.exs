@@ -1,13 +1,29 @@
 defmodule BtrzCredoStyle.MixProject do
   use Mix.Project
 
+  @github_url "https://github.com/Betterez/btrz-style-guide"
+  @version "0.1.0"
+
   def project do
     [
       app: :btrz_credo_style,
-      version: "0.1.0",
+      version: @version,
       elixir: "~> 1.7",
+      source_url: @github_url,
+      homepage_url: @github_url,
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      package: package(),
+      description: "Betterez credo style guide for Elixir projects"
+    ]
+  end
+
+  def package do
+    [
+      name: "btrz_credo_style",
+      maintainers: ["Betterez"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => @github_url}
     ]
   end
 
