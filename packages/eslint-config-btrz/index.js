@@ -139,7 +139,10 @@ module.exports = {
   },
   "overrides": [
     {
-      "files": ["resources/**/tests/**/*.js"],
+      "files": [
+        "resources/**/tests/**/*.js",
+        "resources/**/test-fixtures/*.js"
+      ],
       "rules": {"import/no-extraneous-dependencies": "off"}
     }
   ]
