@@ -1,0 +1,23 @@
+{
+  "name": "eslint-config-btrz-base",
+  "version": "1.0.0",
+  "description": "ESLint configuration for Betterez projects using vue",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Betterez/btrz-style-guide"
+  },
+  "keywords": [
+    "style",
+    "airbnb",
+    "guide",
+    "eslint",
+    "eslintconfig"
+  ],
+  "author": "Betterez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Betterez/btrz-style-guide/issues"
+  },
+  "homepage": "https://github.com/Betterez/btrz-style-guide"
+}

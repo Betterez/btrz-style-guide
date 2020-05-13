@@ -6,28 +6,17 @@ module.exports = {
     "./eslint-config-airbnb-base/rules/style.js",
     "./eslint-config-airbnb-base/rules/variables.js",
     "./eslint-config-airbnb-base/rules/es6.js",
-    "./eslint-config-airbnb-base/rules/imports.js",
-    "plugin:vue/essential"],
+    "./eslint-config-airbnb-base/rules/imports.js"],
   parserOptions: {  // copied from airbnb-config-airbnb-base (see README)
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  settings: {
-    'import/resolver': {
-      nuxt: {
-        extensions: ['.vue']
-      }
-    },
-  },
   plugins: [
-    "html",
     "mocha",
     "chai-friendly"
   ],
   "env": {
-    "browser": true,
     "es6": true,
-    "jquery": true,
     "node": true,
     "mocha": true,
   },
