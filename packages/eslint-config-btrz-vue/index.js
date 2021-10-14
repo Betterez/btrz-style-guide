@@ -1,6 +1,6 @@
 module.exports = {
   extends: [
-    "eslint-config-btrz",
+    "eslint-config-btrz-base",
     "plugin:vue/essential"],
   parserOptions: {  // copied from airbnb-config-airbnb-base (see README)
     ecmaVersion: 2018,
