@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-btrz-base",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "ESLint configuration for Betterez projects using vue",
   "main": "index.js",
   "repository": {

@@ -8,21 +8,33 @@ Guide: https://github.com/airbnb/javascript
 
 The rules were copied from version `13.1.0` of `eslint-config-airbnb-base`.
 
-### Usage
+### Usage for eslint JS
 
-Install `eslint-config-btrz` using npm as a dev dependency.
-Please add and install the peer dependencies (shown after installing) as well!
-
-Next, add an `.eslint` file in your project root which extends this configuration:
-
-```
-module.exports = {
-  extends: ['eslint-config-btrz'],
-};
-```
+Install `eslint`, `@eslint/js`, `eslint-plugin-mocha` and `eslint-config-btrz-base`using npm as dev dependencies.
 
 Please do not add custom rules to your project.
 Just contribute with a change, prior discussing any issues you find :)
+
+Default config file should ne named. `eslint.config.mjs`
+
+Contents for Apis
+
+```js
+
+import globals from "globals";
+import mochaPlugin from "eslint-plugin-mocha";
+import pluginJs from "@eslint/js";
+import btrz from "eslint-config-btrz-base";
+
+export default [
+  {files: ["**/*.js"], languageOptions: {sourceType: "commonjs"}},
+  {languageOptions: {globals: globals.node}},
+  pluginJs.configs.all,
+  mochaPlugin.configs.flat.recommended,
+  btrz.configs.all
+];
+
+```
 
 ## Elixir (credo)
 The elixir projects in Betterez use the [credo](https://github.com/rrrene/credo/) tool for code analysis.
