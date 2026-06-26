@@ -21,6 +21,12 @@
   },
   "homepage": "https://github.com/Betterez/btrz-style-guide",
   "dependencies": {
-    "eslint-config-btrz-base": "1.0.0"
+    "@eslint/eslintrc": "^3.3.5",
+    "eslint-config-btrz-base": "2.0.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=9",
+    "eslint-plugin-html": "^8.1.4",
+    "eslint-plugin-vue": "^10.9.2"
   }
 }
